@@ -2,14 +2,9 @@ package animalKingdom;
 
 public class Fish extends Animal 
 {
-	private static int maxId = 0;
-	private int id;
-
 	public Fish(String name, int yearDiscovered)
 	{
 		super(name, yearDiscovered);
-		maxId++;
-		id = maxId;
 	}
 
 	@Override
