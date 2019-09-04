@@ -94,5 +94,9 @@ public class Main
 		myList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
 		System.out.println("*** Animals that Breathe with Lungs & Named in 1758 ***");
 		printAnimals(myList, a -> a.getYearDiscovered() == 1758);
+
+		System.out.println();
+
+		printAnimals(myList, a -> a instanceof Mammal);
 	}
 }
