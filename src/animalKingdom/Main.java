@@ -4,6 +4,17 @@ import java.util.*;
 
 public class Main 
 {
+	public static void printAnimals(ArrayList<Animal> animals, CheckAnimal tester)
+	{
+		for (Animal a : animals)
+		{
+			if (tester.test(a))
+			{
+				System.out.println(a.getName() + " " + a.getYearDiscovered() + " " + a.move() + " " + a.breath() + " " + a.reproduce());
+			}
+		}
+	}
+
 	public static void main(String[] args)
 	{
 		Mammal panda = new Mammal("Panda", 1869);
@@ -65,6 +76,23 @@ public class Main
 
 		System.out.println();
 
-		
+		System.out.println("*** Animals that Breathe with Lungs ***");
+		printAnimals(myList, a -> a.breath() == "lungs");
+
+		System.out.println();
+
+		System.out.println("*** Animals that Breathe with Lungs & Named in 1758 ***");
+		printAnimals(myList, a -> (a.breath() == "lungs") && (a.getYearDiscovered() == 1758));
+
+		System.out.println();
+
+		System.out.println("*** Animals that Lay Eggs & Breathe with Lungs ***");
+		printAnimals(myList, a -> (a.breath() == "lungs") && (a.reproduce() == "eggs"));
+
+		System.out.println();
+
+		myList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+		System.out.println("*** Animals that Breathe with Lungs & Named in 1758 ***");
+		printAnimals(myList, a -> a.getYearDiscovered() == 1758);
 	}
 }
