@@ -16,6 +16,16 @@ public abstract class Animal
 		return name + " is eating";
 	}
 
+	public int getYearDiscovered()
+	{
+		return yearDiscovered;
+	}
+
+	public String getName()
+	{
+		return name;
+	}
+
 	public abstract String move();
 	public abstract String breath();
 	public abstract String reproduce();

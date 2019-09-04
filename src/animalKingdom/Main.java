@@ -44,5 +44,7 @@ public class Main
 
 		System.out.println("*** Original ArrayList ***");
 		System.out.println(myList.toString());
+
+		myList.sort((a1, a2) -> a2.getYearDiscovered() - a1.getYearDiscovered());
 	}
 }
