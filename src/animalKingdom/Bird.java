@@ -33,6 +33,6 @@ public class Bird extends Animal
 	@Override
 	public String toString()
 	{
-		return "\nBird {id: " + id + ", name: " + name + ", year discovered: " + yearDiscovered + "}";
+		return "\nBird {id: " + id + ", name: " + name + ", year discovered: " + yearDiscovered + ", movement: fly, breathing: lungs, reproduction: eggs}";
 	}
 }

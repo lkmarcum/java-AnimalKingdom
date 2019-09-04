@@ -33,6 +33,6 @@ public class Mammal extends Animal
 	@Override
 	public String toString()
 	{
-		return "\nMammal {id: " + id + ", name: " + name + ", year discovered: " + yearDiscovered + "}";
+		return "\nMammal {id: " + id + ", name: " + name + ", year discovered: " + yearDiscovered + ", movement: walk, breathing: lungs, reproduction: live births}";
 	}
 }

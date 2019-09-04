@@ -33,6 +33,6 @@ public class Fish extends Animal
 	@Override
 	public String toString()
 	{
-		return "\nFish {id: " + id + ", name: " + name + ", year discovered: " + yearDiscovered + "}";
+		return "\nFish {id: " + id + ", name: " + name + ", year discovered: " + yearDiscovered + ", movement: swim, breathing: gills, reproduction: eggs}";
 	}
 }

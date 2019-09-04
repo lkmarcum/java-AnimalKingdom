@@ -45,6 +45,26 @@ public class Main
 		System.out.println("*** Original ArrayList ***");
 		System.out.println(myList.toString());
 
+		System.out.println();
+
 		myList.sort((a1, a2) -> a2.getYearDiscovered() - a1.getYearDiscovered());
+		System.out.println("*** Sorted by Year Named *** ");
+		System.out.println(myList.toString());
+
+		System.out.println();
+
+		myList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+		System.out.println("*** Sorted Alphabetically by Name ***");
+		System.out.println(myList.toString());
+
+		System.out.println();
+
+		myList.sort((a1, a2) -> a1.move().compareToIgnoreCase(a2.move()));
+		System.out.println("*** Sorted by Movement ***");
+		System.out.println(myList.toString());
+
+		System.out.println();
+
+		
 	}
 }
