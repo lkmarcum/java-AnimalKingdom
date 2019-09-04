@@ -2,26 +2,37 @@ package animalKingdom;
 
 public class Fish extends Animal 
 {
+	private static int maxId = 0;
+	private int id;
+
 	public Fish(String name, int yearDiscovered)
 	{
 		super(name, yearDiscovered);
+		maxId++;
+		id = maxId;
 	}
 
 	@Override
-	public abstract String move()
+	public String move()
 	{
-		return "swim"
+		return "swim";
 	}
 
 	@Override
-	public abstract String breath()
+	public String breath()
 	{
-		return "gills"
+		return "gills";
 	}
 	
 	@Override
-	public abstract String reproduce()
+	public String reproduce()
 	{
-		return "eggs"
+		return "eggs";
+	}
+
+	@Override
+	public String toString()
+	{
+		return "\nFish {id: " + id + ", name: " + name + ", year discovered: " + yearDiscovered + "}";
 	}
 }

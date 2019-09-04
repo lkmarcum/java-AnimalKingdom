@@ -2,26 +2,37 @@ package animalKingdom;
 
 public class Bird extends Animal 
 {
+	private static int maxId = 0;
+	private int id;
+
 	public Bird(String name, int yearDiscovered)
 	{
 		super(name, yearDiscovered);
+		maxId++;
+		id = maxId;
 	}
 
 	@Override
-	public abstract String move()
+	public String move()
 	{
-		return "fly"
+		return "fly";
 	}
 
 	@Override
-	public abstract String breath()
+	public String breath()
 	{
-		return "lungs"
+		return "lungs";
 	}
 	
 	@Override
-	public abstract String reproduce()
+	public String reproduce()
 	{
-		return "eggs"
+		return "eggs";
+	}
+
+	@Override
+	public String toString()
+	{
+		return "\nBird {id: " + id + ", name: " + name + ", year discovered: " + yearDiscovered + "}";
 	}
 }
