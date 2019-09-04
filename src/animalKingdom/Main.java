@@ -97,6 +97,7 @@ public class Main
 
 		System.out.println();
 
+		System.out.println("*** Mammals Sorted Alphabetically ***")
 		printAnimals(myList, a -> a instanceof Mammal);
 	}
 }
