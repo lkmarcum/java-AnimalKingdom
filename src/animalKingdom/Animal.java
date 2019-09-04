@@ -19,7 +19,7 @@ public abstract class Animal
 
 	public String eat()
 	{
-		return name + " is eating.";
+		return name + " is eating";
 	}
 
 	public abstract String move();
